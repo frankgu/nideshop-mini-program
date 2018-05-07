@@ -3,75 +3,93 @@
     <image class="avatar" src="{{userInfo.avatar}}"></image>
     <view class="info">
       <text class="name">{{userInfo.nickname}}</text>
-      <!-- <text class="level">{{userInfo.username}}</text> -->
+      <text class="level">{{userInfo.user_level_name}}</text>
     </view>
   </view>
 
   <view class="user-menu">
-    <view class="item">
+    <view class="item" wx:if="{{false}}">
       <navigator url="/pages/ucenter/order/order" class="a">
-        <text class="icon order"></text>
+        <text style="background: url({{noSqlUrl}}/usermenu.png) 0 -437.5rpx no-repeat; background-size: 52.803rpx;"
+              class="icon"/>
         <text class="txt">我的订单</text>
       </navigator>
     </view>
-    <view class="item">
+    <view class="item" wx:if="{{false}}">
       <navigator url="/pages/ucenter/coupon/coupon" class="a">
-        <text class="icon coupon"></text>
+        <text style="background: url({{noSqlUrl}}/usermenu.png) 0 -62.4997rpx no-repeat; background-size: 52.803rpx;"
+              class="icon"/>
         <text class="txt">优惠券</text>
       </navigator>
     </view>
-    <view class="item no-border">
+    <view class="item no-border" wx:if="{{false}}">
       <navigator url="url" class="a">
-        <text class="icon gift"></text>
+        <text style="background: url({{noSqlUrl}}/usermenu.png) 0 -187.5rpx no-repeat; background-size: 52.803rpx;"
+              class="icon"></text>
         <text class="txt">礼品卡</text>
       </navigator>
     </view>
     <view class="item">
       <navigator url="/pages/ucenter/collect/collect" class="a">
-        <text class="icon address"></text>
+        <text style="background: url({{noSqlUrl}}/usermenu.png) 0 -437.5rpx no-repeat; background-size: 52.803rpx;"
+              class="icon"></text>
         <text class="txt">我的收藏</text>
       </navigator>
     </view>
     <view class="item">
       <navigator url="/pages/ucenter/footprint/footprint" class="a">
-        <text class="icon security"></text>
+        <text style="background: url({{noSqlUrl}}/usermenu.png) 0 -500rpx no-repeat; background-size: 52.803rpx;"
+              class="icon"></text>
         <text class="txt">我的足迹</text>
       </navigator>
     </view>
-    <view class="item no-border">
+    <view class="item no-border" wx:if="{{false}}">
       <navigator url="url" class="a">
-        <text class="icon kefu"></text>
+        <text style="background: url({{noSqlUrl}}/usermenu.png) 0 -312.5rpx no-repeat; background-size: 52.803rpx;"
+              class="icon"></text>
         <text class="txt">会员福利</text>
       </navigator>
     </view>
-    <view class="item">
+    <view class="item" wx:if="{{false}}">
       <navigator url="../address/address" class="a">
-        <text class="icon address"></text>
+        <text style="background: url({{noSqlUrl}}/usermenu.png) 0 0 no-repeat; background-size: 52.803rpx;"
+              class="icon"></text>
         <text class="txt">地址管理</text>
       </navigator>
     </view>
-    <view class="item">
+    <view class="item" wx:if="{{false}}">
       <navigator url="url" class="a">
-        <text class="icon security"></text>
+        <text style="background: url({{noSqlUrl}}/usermenu.png) 0 -500rpx no-repeat; background-size: 52.803rpx;"
+              class="icon"></text>
         <text class="txt">账号安全</text>
       </navigator>
     </view>
-    <view class="item no-border">
+    <view class="item no-border" wx:if="{{false}}">
       <navigator url="url" class="a">
-        <text class="icon kefu"></text>
+        <text style="background: url({{noSqlUrl}}/usermenu.png) 0 -312.5rpx no-repeat; background-size: 52.803rpx;"
+              class="icon"></text>
         <text class="txt">联系客服</text>
       </navigator>
     </view>
-    <view class="item item-bottom">
+    <view class="item item-bottom" wx:if="{{false}}">
       <navigator url="url" class="a">
-        <text class="icon help"></text>
+        <text style="background: url({{noSqlUrl}}/usermenu.png) 0 -250rpx no-repeat; background-size: 52.803rpx;"
+              class="icon"></text>
         <text class="txt">帮助中心</text>
       </navigator>
     </view>
-    <view class="item item-bottom">
+    <view class="item">
       <navigator url="/pages/ucenter/feedback/feedback" class="a">
-        <text class="icon feedback"></text>
+        <text style="background: url({{noSqlUrl}}/usermenu.png) 0 -375rpx no-repeat; background-size: 52.803rpx;"
+              class="icon"></text>
         <text class="txt">意见反馈</text>
+      </navigator>
+    </view>
+    <view class="item no-border" wx:if="{{userInfo.user_level_id==99}}">
+      <navigator url="/pages/" class="a">
+        <text style="background: url({{noSqlUrl}}/usermenu.png) 0 -125rpx no-repeat; background-size: 52.803rpx;"
+              class="icon"></text>
+        <text class="txt">编辑</text>
       </navigator>
     </view>
   </view>

@@ -1,5 +1,6 @@
-var util = require('../../utils/util.js');
 var api = require('../../config/api.js');
+var util = require('../../utils/util.js');
+var config = require('../../config/config');
 
 Page({
   data: {
@@ -9,7 +10,9 @@ Page({
     scrollLeft: 0,
     scrollTop: 0,
     goodsCount: 0,
-    scrollHeight: 0
+    scrollHeight: 0,
+    noSqlUrl: config.NoSQL_URL,
+    editMode: false
   },
   onLoad: function (options) {
     this.getCatalog();
@@ -56,7 +59,7 @@ Page({
     // 页面关闭
   },
   getList: function () {
-    var that = this;
+    let that = this;
     util.request(api.ApiRootUrl + 'api/catalog/' + that.data.currentCategory.cat_id)
       .then(function (res) {
         that.setData({
@@ -72,5 +75,15 @@ Page({
     }
 
     this.getCurrentCategory(event.currentTarget.dataset.id);
+  },
+  addCatalog: function (event) {
+    wx.navigateTo({
+      url: '../edit/editCatalog/editCatalog'
+    });
+  },
+  editCatalogL1: function (event) {
+    wx.navigateTo({
+      url: '../edit/editCatalog/editCatalog?currentCatalogId=' + event.currentTarget.dataset.id
+    });
   }
-})
+});

@@ -66,6 +66,12 @@ page {
   font-size: 28rpx;
   border-left: 6rpx solid #fff;
 }
+.catalog .nav .item.add {
+  width: 90rpx;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .catalog .nav .item.active {
   color: #ab2b2b;

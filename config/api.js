@@ -6,6 +6,7 @@ module.exports = {
   CatalogCurrent: ApiRootUrl + 'catalog/current',  //分类目录当前分类数据接口
 
   AuthLoginByWeixin: ApiRootUrl + 'auth/loginByWeixin', //微信登录
+  AuthCOS: ApiRootUrl + 'auth/authCos', // Authenticate the tencent COS file upload
 
   GoodsCount: ApiRootUrl + 'goods/count',  //统计商品总数
   GoodsList: ApiRootUrl + 'goods/list',  //获得商品列表

@@ -16,12 +16,11 @@ Page({
   },
   onShareAppMessage: function () {
     return {
-      title: 'NideShop',
-      desc: '仿网易严选微信小程序商城',
+      title: '东峰的杂货铺',
+      desc: '东峰的杂货铺',
       path: '/pages/index/index'
     }
   },
-
   getIndexData: function () {
     let that = this;
     util.request(api.IndexUrl).then(function (res) {
